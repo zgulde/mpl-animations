@@ -32,7 +32,6 @@ def animate(i):
     y = stats.norm(mu_i, sigma_i).pdf(x)
     ax.plot(x, y, c='firebrick')
 anim = FuncAnimation(fig, animate, interval=16, frames=range(len(mu)), repeat=False)
-plt.show()
 
 fp = './normal-distribution-demo.html'
 print(f'Saving animation to {fp}')

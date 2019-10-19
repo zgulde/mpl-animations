@@ -27,7 +27,6 @@ def animate(i):
     y = stats.binom(n_i, p_i).pmf(x)
     ax.bar(x, y, color='lightblue', width=1, edgecolor='black')
 anim = FuncAnimation(fig, animate, interval=100, frames=range(200), repeat=False)
-plt.show()
 
 fp = './binomial-distribution-demo.html'
 print(f'Saving animation to {fp}')

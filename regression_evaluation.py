@@ -1,3 +1,6 @@
+import math
+import matplotlib.pyplot as plt
+from matplotlib.animation import FuncAnimation
 from sklearn.linear_model import LinearRegression
 from pydataset import data
 import textwrap as tw
@@ -56,8 +59,11 @@ def animate(i):
         $RMSE = \frac{\sum(y - \hat{y})}{n} = %.2f$
         ''' % rmse).strip()
         ax.text(2.5, 4.3, t)
+
 anim = FuncAnimation(fig, animate, interval=2000, frames=range(7), repeat=False)
-plt.show()
-with open('./regression-evaluation.html', 'w+') as f:
+
+fp = './regression-evaluation.html'
+print(f'saving to {fp}')
+with open(fp, 'w+') as f:
     f.write(anim.to_html5_video())
 
