@@ -27,8 +27,9 @@ def animate(i):
         txt+= 'Increasing $\sigma$ makes it more wide\n'
         ax.text(-5.5, .65, txt, va='top')
     title = 'The Normal Distribution\n'
-    title+= f'$\mu$ = {mu_i:.2f}\n$\sigma$ = {sigma_i:.2f}'
     ax.set(title=title, xlim=xlim, ylim=(0, .7), ylabel='P(X = x)', xlabel='$x$')
+    txt = f'$\mu$ = {mu_i:.2f}\n$\sigma$ = {sigma_i:.2f}'
+    ax.text(4, .68, txt, size=16, ha='right', va='top')
     y = stats.norm(mu_i, sigma_i).pdf(x)
     ax.plot(x, y, c='firebrick')
 anim = FuncAnimation(fig, animate, interval=16, frames=range(len(mu)), repeat=False)

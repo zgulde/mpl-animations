@@ -14,7 +14,7 @@ normal-distribution-demo.mp4: normal_distribution.py
 regression-evaluation.mp4: regression_evaluation.py
 	python $<
 
-deploy:
+deploy: all
 	ssh zgul.de mkdir -p web/zgul.de/stats
 	scp index.md *.mp4 zgul.de:web/zgul.de/stats/
 

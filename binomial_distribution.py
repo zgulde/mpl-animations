@@ -6,7 +6,7 @@ from matplotlib.animation import FuncAnimation
 plt.rc('figure', figsize=(16, 9))
 
 p = [*np.repeat(.5, 50), *np.linspace(.5, 1, 50), *np.linspace(1, 0, 100)]
-n = [*np.linspace(5, 25, 50).round(), *np.repeat(25, 150)]
+n = [*np.linspace(5, 25, 50).round().astype(int), *np.repeat(25, 150)]
 fig, ax = plt.subplots()
 x = np.arange(0, 26)
 def animate(i):
