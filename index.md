@@ -1,5 +1,23 @@
+<style>
+    video { max-width: 100%; }
+</style>
 # Stats Animations
 
-- [Regression Evaluation Metrics](regression-evaluation.html)
-- [Changing parameters of the binomial distribution](binomial-distribution-demo.html)
-- [Changing parameters of the normal distribution](normal-distribution-demo.html)
+- [Regression Evaluation Metrics](regression-evaluation.mp4)
+
+    <video controls>
+        <source src="regression-evaluation.mp4" />
+    </video>
+
+- [Changing parameters of the binomial distribution](binomial-distribution-demo.mp4)
+
+    <video controls>
+        <source src="binomial-distribution-demo.mp4" />
+    </video>
+
+- [Changing parameters of the normal distribution](normal-distribution-demo.mp4)
+
+    <video controls>
+        <source src="normal-distribution-demo.mp4" />
+    </video>
+

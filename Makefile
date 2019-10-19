@@ -1,20 +1,23 @@
-default:
-	@echo noop
+default: all
 
-HTML_FILES = binomial-distribution-demo.html normal-distribution-demo.html regression-evaluation.html
+MP4_FILES = binomial-distribution-demo.mp4 normal-distribution-demo.mp4 regression-evaluation.mp4
 
-all: $(HTML_FILES)
+all: $(MP4_FILES) index.html
 
-binomial-distribution-demo.html: binomial_distribution.py
+index.html: index.md
+	pandoc --template github index.md > index.html
+
+binomial-distribution-demo.mp4: binomial_distribution.py
 	python $<
-normal-distribution-demo.html: normal_distribution.py
+normal-distribution-demo.mp4: normal_distribution.py
 	python $<
-regression-evaluation.html: regression_evaluation.py
+regression-evaluation.mp4: regression_evaluation.py
 	python $<
 
 deploy:
 	ssh zgul.de mkdir -p web/zgul.de/stats
-	scp index.md *.html zgul.de:web/zgul.de/stats/
+	scp index.md *.mp4 zgul.de:web/zgul.de/stats/
 
 clean:
 	rm -f *.html
+	rm -f *.mp4

@@ -28,7 +28,6 @@ def animate(i):
     ax.bar(x, y, color='lightblue', width=1, edgecolor='black')
 anim = FuncAnimation(fig, animate, interval=100, frames=range(200), repeat=False)
 
-fp = './binomial-distribution-demo.html'
+fp = 'binomial-distribution-demo.mp4'
 print(f'Saving animation to {fp}')
-with open(fp, 'w+') as f:
-    f.write(anim.to_html5_video())
+anim.save(fp)

@@ -5,6 +5,8 @@ from sklearn.linear_model import LinearRegression
 from pydataset import data
 import textwrap as tw
 
+plt.rc('figure', figsize=(16, 9))
+
 fig, ax = plt.subplots()
 ax.set(xlim=(0, 45), ylim=(0, 8))
 tips = data('tips').sample(8, random_state=456)
@@ -62,8 +64,7 @@ def animate(i):
 
 anim = FuncAnimation(fig, animate, interval=2000, frames=range(7), repeat=False)
 
-fp = './regression-evaluation.html'
+fp = 'regression-evaluation.mp4'
 print(f'saving to {fp}')
-with open(fp, 'w+') as f:
-    f.write(anim.to_html5_video())
+anim.save(fp)
 
