@@ -40,7 +40,7 @@ def animate(i):
         sse = ((y - yhat) ** 2).sum()
         t = tw.dedent('''
         Sum of Squred Errors is the sum of the residuals, squared
-        $SSE = \sum(y - \hat{y}) = %.2f$
+        $SSE = \sum(y - \hat{y})^2 = %.2f$
         ''' % sse).strip()
         ax.text(2.5, 6, t)
     elif i == 5:
@@ -48,7 +48,7 @@ def animate(i):
         mse = sse / tips.shape[0]
         t = tw.dedent(r'''
         Mean Squared Error is the SSE divided by the number of points
-        $MSE = \frac{\sum(y - \hat{y})}{n} = %.2f$
+        $MSE = \frac{1}{n}\sum(y - \hat{y})^2 = %.2f$
         ''' % mse).strip()
         ax.text(2.5, 5.25, t)
     elif i == 6:
@@ -58,7 +58,7 @@ def animate(i):
         t = tw.dedent(r'''
         Root Mean Squared Error is the square root of the MSE
         RMSE has the same units as our y variable
-        $RMSE = \frac{\sum(y - \hat{y})}{n} = %.2f$
+        $RMSE = \sqrt{\frac{1}{n}\sum(y - \hat{y})^2} = %.2f$
         ''' % rmse).strip()
         ax.text(2.5, 4.3, t)
 
