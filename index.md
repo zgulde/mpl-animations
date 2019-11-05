@@ -1,7 +1,11 @@
+---
+title: DS Animations
+---
 <style>
     video { max-width: 100%; }
 </style>
-# Stats Animations
+
+# Data Science Animations
 
 - [Regression Evaluation Metrics](regression-evaluation.mp4)
 
@@ -19,5 +23,11 @@
 
     <video controls>
         <source src="normal-distribution-demo.mp4" />
+    </video>
+
+- [DBSCAN Approximation](dbscan.mp4)
+
+    <video controls>
+        <source src="dbscan.mp4" />
     </video>
 

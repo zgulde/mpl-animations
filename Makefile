@@ -1,6 +1,6 @@
 default: all
 
-MP4_FILES = binomial-distribution-demo.mp4 normal-distribution-demo.mp4 regression-evaluation.mp4
+MP4_FILES = binomial-distribution-demo.mp4 normal-distribution-demo.mp4 regression-evaluation.mp4 dbscan.mp4
 
 all: $(MP4_FILES) index.html
 
@@ -12,6 +12,8 @@ binomial-distribution-demo.mp4: binomial_distribution.py
 normal-distribution-demo.mp4: normal_distribution.py
 	python $<
 regression-evaluation.mp4: regression_evaluation.py
+	python $<
+dbscan.mp4: dbscan.py
 	python $<
 
 deploy: all
