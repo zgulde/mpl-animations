@@ -1,3 +1,6 @@
 *.html
 __pycache__
 *.mp4
+.ipynb_checkpoints
+*.log.py
+*.gif
